@@ -35,7 +35,7 @@ Endpoints
     <td>tm: List[List]<br/>limit: Integer</td>
   </tr>
   <tr>
-    <td>GET</td>
+    <td>POST</td>
     <td>/nextState</td>
     <td>tm: List[List] <br/>ps: Integer</td>
 
