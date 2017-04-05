@@ -18,10 +18,11 @@ defmodule MarkovianApi.Router.Homepage do
      json(conn, %{result: c})
    end
    params do
+     requires :tm, type: List[List]
      requires :ps, type: Integer
    end
-   get "/nextState" do
-     json(conn, {result: Markov.Chain.next_state(params[:ps], tm)})
+   post "/nextState" do
+     json(conn, %{result: Markov.Chain.next_state(params[:ps], params[:tm])})
    end
  end
  defmodule MarkovianApi.API do
