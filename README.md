@@ -13,7 +13,7 @@ iex -S mix
 ```
 For production running do
 ```
-mix run
+mix run --no-halt
 ```
 
 Endpoints
