@@ -6,14 +6,14 @@ defmodule MarkovianApi.Router.Homepage do
    params do
      requires :pm, type: List[List]
    end
-   post "/gettm" do
+   post :gettm do
      json(conn, %{tm: Markov.Utils.prob(params[:pm])})
    end
    params do
      requires :tm, type: List[List]
      requires :limit, type: Integer, values: 0..1000
    end
-   post "/runchain" do
+   post :runchain do
      {_,_,c,_} = Markov.Chain.run_chain({0, params[:tm], params[:limit]})
      json(conn, %{result: c})
    end
@@ -21,7 +21,7 @@ defmodule MarkovianApi.Router.Homepage do
      requires :tm, type: List[List]
      requires :ps, type: Integer
    end
-   post "/nextstate" do
+   post :nextstate do
      json(conn, %{result: Markov.Chain.next_state(params[:ps], params[:tm])})
    end
  end

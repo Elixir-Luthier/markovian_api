@@ -26,17 +26,17 @@ Endpoints
   </tr>
   <tr>
     <td>POST</td>
-    <td>/getTm</td>
+    <td>/gettm</td>
     <td>pm : List[List]</td>
   </tr>
   <tr>
     <td>POST</td>
-    <td>/runChain</td>
+    <td>/runchain</td>
     <td>tm: List[List]<br/>limit: Integer</td>
   </tr>
   <tr>
     <td>POST</td>
-    <td>/nextState</td>
+    <td>/nextstate</td>
     <td>tm: List[List] <br/>ps: Integer</td>
 
 </table>
@@ -73,7 +73,7 @@ Parameter Info.
 
 POST
 ```
-http://127.0.0.1:8880/getTm
+http://127.0.0.1:8880/gettm
 ```
 BODY
 ```
@@ -90,7 +90,7 @@ RESPONSE
 
 POST
 ```
-http://127.0.0.1:8880/runChain
+http://127.0.0.1:8880/runchain
 ```
 BODY
 ```
@@ -108,7 +108,7 @@ RESPONSE
 
 POST
 ```
-http://127.0.0.1:8880/nextState
+http://127.0.0.1:8880/nextstate
 ```
 BODY
 ```
